@@ -3,7 +3,8 @@
 
 As I didn't find any library for accessing the MQ-135 measurements with LUA I wrote this library with is essentially a copy of the [C library from GeorgK for Arduino](https://github.com/GeorgK/MQ135/).
 
-# Connection to NodeMCU
+
+## Connection to NodeMCU
 This library has been tested with the [MQ-135 sensor board by Flying-Fish](http://www.ebay.com/sch/?_nkw=MQ-135) which contains a resistor and a digital output.
 
 Simply connect the board (1) to the NodeMCU (2) unit ike this:
@@ -11,10 +12,15 @@ Simply connect the board (1) to the NodeMCU (2) unit ike this:
 - VCC to 3V3
 - AO to AO
 
-# Calibration And Burn-In
-Before you can use the sensor you are advised to "burn in" the sensor by having it powered on for 24 hours. After
 
-# Links
+## Calibration And Burn-In
+Before you can use the sensor you are advised to "burn in" the sensor by having it powered on for 24 hours. After this time use the calibrate.lua script to get an average value for RZero after putting the board outside for 30 to 60 minutes and writing down the average RZero value shown.
+
+## Usage
+Just check the MeasureAirQuality.lua script on how to use it. You don't have to modify the library as you can simply override the default values for your sensor programmatically.
+
+
+## Links
 - [Calculation Info by Davide Gironi](http://davidegironi.blogspot.de/2014/01/cheap-co2-meter-using-mq135-sensor-with.html)
 - [MQ135 Arduino Library](https://hackaday.io/project/3475-sniffing-trinket/log/12363-mq135-arduino-library)
 - [MQ-135 datasheet](https://www.mysensors.org/dl/57c3ebeb071cb0e34c90057a/design/SNS-MQ135.pdf)
